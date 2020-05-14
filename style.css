@@ -1,0 +1,342 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(rocky.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; 
+background-image: url(baky.jpg);
+}
+div.block{
+    background-color: red;
+    width: 200px;
+    height: 170px;
+    margin: 150px 200px 400px 400px;
+    text-align-last: center;
+    display: none;
+    position: absolute;
+}
+.glow {
+    font-size:28px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+ .animated {
+            
+            -webkit-animation-duration: 10s;
+            animation-duration: 0.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         @-webkit-keyframes rollIn {
+            0% { 
+               opacity: 0; 
+               -webkit-transform: translateX(100%) rotate(-2deg); 
+            }
+            100% { 
+               opacity: 1; 
+               -webkit-transform: translateX(10px) rotate(600deg); 
+            }
+         }
+         
+        @keyframes rollIn {
+    0% { 
+       opacity: 0; 
+       transform: translateX(-10%) rotate(-800deg); 
+    }
+    100% { 
+       opacity: 1; 
+       transform: translateX(-50px) rotate(0deg); 
+    }
+ }
+ .rollIn {
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn;
+ }
+#intro{
+    height :100%;
+    width:100%;
+}
+.active .player-name { 
+    font-size: 50px;
+    font-weight: 500;
+    color: #2196f3;
+    
+    
+ }
+.player-name{
+    font-size: 50px;
+    font-weight: 500;
+    color: #2196f3;
+}
+ 
+ @-webkit-keyframes rollIn {
+    0% { 
+       opacity: 0; 
+       transform: translateX(-100%) rotate(-800deg); 
+    }
+    100% { 
+       opacity: 1; 
+       transform: translateX(100px) rotate(800deg); 
+    }
+ }
+ .rollIn {
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn;
+ }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 97px;
+    position: absolute;
+    color: #3b5998;
+    top: -30px;
+    right: -28px;
+    
+}
+
+.player-current-box {
+    background-color:#099FFF;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    height: 150px;
+}
+neww:hover{
+    font-weight: 300px;
+    font-size: 300px;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    background-color: red;
+    margin-bottom: 10px;
+    font-size: 20px;
+    width:120px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+    background-color:black;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+a
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+a:hover
+{
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+a span
+{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+a:hover span:nth-child(1)
+{
+    left: 100%;
+    transition: 1s;
+} 
+a span:nth-child(2)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+}
+a:hover span:nth-child(2)
+{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+a span:nth-child(3)
+{
+    top: -100℅;
+    right: 0%;
+    width: 2px%;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+a:hover span:nth-child(3)
+{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+a span:nth-child(4)
+{
+    bottom: -100℅;
+    left: 0%;
+    width: 2px%;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+a:hover span:nth-child(4)
+{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.btn-new { top: 45px;
+background-color:#151515;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+.play{
+    background background-color: red;
+    height:100px;
+    width:30px;
+}
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+.looser{
+
+    background-image:url(looser.jpg);
+}
+.winner {
+     background-image:url(win.png)
+     }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
